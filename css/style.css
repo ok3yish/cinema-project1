@@ -1,0 +1,39 @@
+body{
+    background-color: #621402;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.user{
+    margin-left:auto;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.container {
+    max-width: 1170px;
+    margin:auto;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding-left: 57px;
+}
+.menu-item {
+margin-right: 25px;
+}
+.menulink{
+    color: white;
+    text-decoration: none;
+}
+.avatar{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-left: 11px;
+}
