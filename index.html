@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <title>Online cinema</title>
 </head>
 <body>
@@ -17,6 +18,13 @@
                 <img src="img/logo.svg" alt="logo">
             </a>
             <nav class="nav">
+              <button class="m-menu">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                  <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                  <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+                </svg>
+            </button>
                 <ul class="menu">
                     <li class="menu-item">
                          <a href="#" class="menulink">Главная</a>
@@ -67,7 +75,7 @@
                 <!-- /.film-details -->
             </div>
             <!-- /.film-info -->
-            <a href="#" class="film-trailer">
+            <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=tDCH7-lteAc" href="#" class="film-trailer">
                 <svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_1_158)">
                     <circle cx="54" cy="50" r="50" fill="white"/>
@@ -90,7 +98,7 @@
                     <rect width="41.8013" height="41.8013" fill="white" transform="translate(38.1837 29.0816)"/>
                     </clipPath>
                     </defs>
-                    </svg>                    
+                </svg>                    
             </a>
             <!-- /.film-trailer -->
         </div>
@@ -143,7 +151,7 @@
         <!-- /.session -->
     </header>
     <div class="sheme container">
-        <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="scheme-svg" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="light" d="M128 115L201.04 48H968.96L1042 115H128Z" fill="url(#paint0_linear_13_374)" />
           <line x1="76" y1="43" x2="1094" y2="43" stroke="black" stroke-opacity="0.39" stroke-width="10" />
           <path
@@ -651,6 +659,7 @@
       </div>
         <a href="#" class="button button-pay">Перейти к оплате</a>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
       <script src="javascript/script.js" ></script>
 </body>
 </html>

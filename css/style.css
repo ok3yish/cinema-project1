@@ -7,14 +7,23 @@ body{
     color: #fff;
 }
 .header {
-    min-height: 100vh;
+    padding-bottom: 60px;
     background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
+}
+.m-menu {
+    display: none;
 }
 .navbar{
     display: flex;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.nav {
+    position: relative;
+}
+.is-open {
+    display: block !important;
 }
 .user{
     margin-left:auto;
@@ -33,7 +42,7 @@ body{
     padding-left: 57px;
 }
 .menu-item {
-margin-right: 25px;
+    margin-right: 25px;
 }
 .menulink{
     color: white;
@@ -154,7 +163,7 @@ margin-right: 25px;
     margin-top: 15px;
 }
 .select-cinema {
-    min-width: 470px;
+    width: 470px;
 }
 .select-text {
     color: black;
@@ -163,59 +172,63 @@ margin-right: 25px;
     background: rgba(36,36,36,0.18);
     border-radius:10px;
     margin-bottom: 40px;
-  }
-  .sheme path:not(.light){
+}
+.scheme-svg {
+    max-width: 1170px;
+}
+.sheme path:not(.light){
     fill:rgba(255,255,255,0.2);
     cursor: pointer;
-  }
-  .sheme path:not(.light):hover {
+}
+.sheme path:not(.light):hover {
     fill: rgba(255, 255, 255, 0.5);
-  }
-  .sheme path.booked,
-  .sheme path.booked:hover{
+}
+.sheme path.booked,
+.sheme path.booked:hover{
     fill: rgba(255, 255, 255, 0.05);
     cursor:not-allowed;
-  }
-  .legend{
+}
+.legend{
     display: flex;
     align-items: center;
     border-top: 1px solid rgba(255,255,255,0.5);
     max-width: 1024px;
+    width: 90%;
     margin: auto;
     padding-top:22px ;
     padding-bottom: 30px;
-  }
-  .legend-label{
+}
+.legend-label{
     display: flex;
     align-items: center;
     margin-right: 30px;
     color:rgba(255, 255, 255, 0.5);
-  }
-  .sheme path.active,
-  .sheme path.active:hover {
+}
+.sheme path.active,
+.sheme path.active:hover {
     fill: #fe8e05;
     cursor: pointer;
-  }
-  .legend svg{
+}
+.legend svg{
     margin-right: 15px;
-  }
-  .price{
+}
+.price{
     padding-top: 20px ;
     padding-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .price-label{
+}
+.price-label{
     display: block;
     font-size: 18px;
     line-height: 21px;
-  }
-  .price-tag{
+}
+.price-tag{
     font-size: 52px;
     line-height: 61px;
-  }
-  .button{
+}
+.button{
     display: block; 
     background: #fe8e05;
     border-radius:5px;
@@ -224,4 +237,92 @@ margin-right: 25px;
     font-size: 18px;
     line-height: 21px;
     padding: 24px 52px;
-  }
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .select-cinema {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .session {
+        flex-wrap: wrap;
+    }
+
+    .session-date {
+        flex-basis: 70%;
+        margin-bottom: 40px;
+    }
+
+    .session-time {
+        order: 2;
+    }
+
+    .session-cinema {
+        order: 3;
+    }
+
+    .menu-item {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 20px;
+        margin-left: 20px;
+        flex-direction: column;
+        background-color: #621402;
+        z-index: 9;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY( -20%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .menu-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .m-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .is-open{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .film-description{
+        margin-right: 30px;
+    }
+    .film{
+        flex-direction: column;
+    }
+    .film-trailer{
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
